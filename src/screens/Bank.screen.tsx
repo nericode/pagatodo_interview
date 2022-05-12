@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Text} from 'react-native';
+import {FlatList, SafeAreaView, Text} from 'react-native';
 import {useQuery} from 'react-query';
 import bankService from '../api/Bank.service';
 import {QueryKeys} from '../shared/QueryKeys';
@@ -23,14 +23,16 @@ const BankScreen = () => {
   }
 
   return (
-    <FlatList
-      data={data}
-      renderItem={({item}) => <BankItem {...item} />}
-      keyExtractor={item => item.bankName}
-      ListHeaderComponent={
-        <Text style={bankStyles.headerTitle}>List of Banks</Text>
-      }
-    />
+    <SafeAreaView style={{flex: 1}}>
+      <FlatList
+        data={data}
+        renderItem={({item}) => <BankItem {...item} />}
+        keyExtractor={item => item.bankName}
+        ListHeaderComponent={
+          <Text style={bankStyles.headerTitle}>List of Banks</Text>
+        }
+      />
+    </SafeAreaView>
   );
 };
 
