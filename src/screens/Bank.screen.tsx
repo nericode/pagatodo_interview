@@ -4,6 +4,7 @@ import {useQuery} from 'react-query';
 import bankService from '../api/Bank.service';
 import {QueryKeys} from '../shared/QueryKeys';
 import BankItem from './components/BankItem';
+import Error from './components/Error';
 import Loader from './components/Loader';
 import bankStyles from './styles/bank.styles';
 
@@ -18,7 +19,7 @@ const BankScreen = () => {
   }
 
   if (isError) {
-    return <Text>Ups!, a error occurred!</Text>;
+    return <Error />;
   }
 
   return (

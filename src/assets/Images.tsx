@@ -10,6 +10,7 @@ const Images: IObjectKeys = {
   bbva_bancomer: require('./images/bbva.png'),
   santander: require('./images/santander.jpeg'),
   scotiabank: require('./images/scotianbank.jpeg'),
+  robot: require('./images/robot.png'),
 };
 
 export default Images;
