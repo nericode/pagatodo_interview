@@ -9,7 +9,7 @@ const Loader = () => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <ActivityIndicator size="large" color="black" />
+      <ActivityIndicator testID="bank-loader-ai" size="large" color="black" />
     </View>
   );
 };
